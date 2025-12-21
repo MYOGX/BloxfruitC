@@ -58,21 +58,15 @@ export default function HomeScreen() {
   };
 
   return (
-    <div className="flex-1 p-8">
+    <div className="flex-1 p-10">
       {/* Header */}
       <div className="mb-10">
-        <div className="relative inline-block mb-4">
-          {/* Glow effect behind title */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-lg blur-2xl opacity-30 animate-pulse"></div>
-
-          <h1 className="relative text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mb-3">
-            DISCOVER YOUR COMBO
-          </h1>
-        </div>
-        <p className="text-xl text-slate-300 font-medium flex items-center gap-2">
-          <span className="text-2xl">⚡</span>
-          Browse <span className="text-purple-400 font-bold">{fruits.length}</span> fruits with
-          <span className="text-purple-400 font-bold">{fruits.reduce((acc, f) => acc + f.combos.length, 0)}</span> deadly PvP combos
+        <h1 className="text-5xl font-black text-white mb-4 tracking-tight">
+          Discover Your Perfect Combo
+        </h1>
+        <p className="text-lg text-[#8b949e] font-medium">
+          Browse <span className="text-[#ff6b35] font-bold">{fruits.length}</span> fruits with
+          <span className="text-[#ff6b35] font-bold"> {fruits.reduce((acc, f) => acc + f.combos.length, 0)}</span> deadly PvP combos
         </p>
       </div>
 

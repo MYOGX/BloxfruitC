@@ -26,16 +26,14 @@ export default function FilterPanel({
   const hasActiveFilters = selectedRarities.length > 0 || selectedTypes.length > 0 || selectedDifficulties.length > 0;
 
   return (
-    <div className="sticky top-8 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border-2 border-slate-700/50 p-6 space-y-6 shadow-2xl">
+    <div className="sticky top-8 bg-[#161b22] rounded-xl border-2 border-[#30363d] p-6 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 flex items-center gap-2">
-          <span className="text-2xl">🎯</span> FILTERS
-        </h2>
+        <h2 className="text-lg font-black text-white uppercase tracking-wide">Filters</h2>
         {hasActiveFilters && (
           <button
             onClick={onReset}
-            className="px-3 py-1.5 text-xs font-bold text-purple-300 hover:text-white bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-xs font-bold text-white bg-[#ff6b35] hover:bg-[#ff8555] rounded-lg transition-colors"
           >
             RESET
           </button>
@@ -44,9 +42,7 @@ export default function FilterPanel({
 
       {/* Rarity Filter */}
       <div>
-        <h3 className="text-sm font-bold text-purple-300 mb-3 uppercase tracking-wide flex items-center gap-2">
-          <span>✨</span> RARITY
-        </h3>
+        <h3 className="text-xs font-bold text-[#8b949e] uppercase tracking-wide mb-3">Rarity</h3>
         <div className="space-y-2">
           {rarities.map((rarity) => {
             const isSelected = selectedRarities.includes(rarity);
@@ -54,10 +50,10 @@ export default function FilterPanel({
               <button
                 key={rarity}
                 onClick={() => onRarityToggle(rarity)}
-                className={`w-full px-4 py-2.5 rounded-xl text-sm font-bold text-left transition-all duration-200 border-2 ${
+                className={`w-full px-4 py-2.5 rounded-lg text-sm font-bold text-left transition-all border-2 ${
                   isSelected
-                    ? `rarity-${rarity.toLowerCase()} scale-105 shadow-lg`
-                    : 'border-slate-700/50 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:border-slate-600'
+                    ? `rarity-${rarity.toLowerCase()}`
+                    : 'border-[#30363d] bg-[#0d1117] text-[#8b949e] hover:bg-[#161b22] hover:text-white'
                 }`}
               >
                 {rarity}
@@ -69,9 +65,7 @@ export default function FilterPanel({
 
       {/* Type Filter */}
       <div>
-        <h3 className="text-sm font-bold text-cyan-300 mb-3 uppercase tracking-wide flex items-center gap-2">
-          <span>🌀</span> TYPE
-        </h3>
+        <h3 className="text-xs font-bold text-[#8b949e] uppercase tracking-wide mb-3">Type</h3>
         <div className="space-y-2">
           {types.map((type) => {
             const isSelected = selectedTypes.includes(type);
@@ -79,13 +73,13 @@ export default function FilterPanel({
               <button
                 key={type}
                 onClick={() => onTypeToggle(type)}
-                className={`w-full px-4 py-2.5 rounded-xl text-sm font-bold text-left transition-all duration-200 border-2 ${
+                className={`w-full px-4 py-2.5 rounded-lg text-sm font-bold text-left transition-all border-2 ${
                   isSelected
-                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 border-cyan-400 text-white shadow-lg shadow-cyan-500/30 scale-105'
-                    : 'border-slate-700/50 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:border-slate-600'
+                    ? 'bg-[#00d9ff] border-[#00d9ff] text-white'
+                    : 'border-[#30363d] bg-[#0d1117] text-[#8b949e] hover:bg-[#161b22] hover:text-white'
                 }`}
               >
-                {type === 'Natural' && '🌿'} {type === 'Elemental' && '⚡'} {type === 'Beast' && '🦁'} {type}
+                {type}
               </button>
             );
           })}
@@ -94,25 +88,23 @@ export default function FilterPanel({
 
       {/* Difficulty Filter */}
       <div>
-        <h3 className="text-sm font-bold text-pink-300 mb-3 uppercase tracking-wide flex items-center gap-2">
-          <span>⚔️</span> DIFFICULTY
-        </h3>
+        <h3 className="text-xs font-bold text-[#8b949e] uppercase tracking-wide mb-3">Difficulty</h3>
         <div className="space-y-2">
           {difficulties.map((difficulty) => {
             const isSelected = selectedDifficulties.includes(difficulty);
-            const gradients = {
-              Beginner: 'from-green-600 to-emerald-600 border-green-400 shadow-green-500/30',
-              Intermediate: 'from-yellow-600 to-orange-600 border-yellow-400 shadow-yellow-500/30',
-              Advanced: 'from-red-600 to-rose-600 border-red-400 shadow-red-500/30',
+            const colors = {
+              Beginner: 'bg-emerald-600 border-emerald-500',
+              Intermediate: 'bg-yellow-600 border-yellow-500',
+              Advanced: 'bg-red-600 border-red-500',
             };
             return (
               <button
                 key={difficulty}
                 onClick={() => onDifficultyToggle(difficulty)}
-                className={`w-full px-4 py-2.5 rounded-xl text-sm font-bold text-left transition-all duration-200 border-2 ${
+                className={`w-full px-4 py-2.5 rounded-lg text-sm font-bold text-left transition-all border-2 ${
                   isSelected
-                    ? `bg-gradient-to-r ${gradients[difficulty]} text-white shadow-lg scale-105`
-                    : 'border-slate-700/50 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:border-slate-600'
+                    ? `${colors[difficulty]} text-white`
+                    : 'border-[#30363d] bg-[#0d1117] text-[#8b949e] hover:bg-[#161b22] hover:text-white'
                 }`}
               >
                 {difficulty}
@@ -124,12 +116,10 @@ export default function FilterPanel({
 
       {/* Active Filter Count */}
       {hasActiveFilters && (
-        <div className="pt-4 border-t border-slate-700/50">
-          <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-lg p-3 border border-purple-500/30">
-            <p className="text-xs text-purple-300 font-bold">
-              {selectedRarities.length + selectedTypes.length + selectedDifficulties.length} filter(s) active
-            </p>
-          </div>
+        <div className="pt-4 border-t-2 border-[#30363d]">
+          <p className="text-xs text-[#8b949e] font-medium">
+            {selectedRarities.length + selectedTypes.length + selectedDifficulties.length} filter(s) active
+          </p>
         </div>
       )}
     </div>
