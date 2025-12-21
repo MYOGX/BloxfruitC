@@ -5,6 +5,7 @@ export default function Sidebar() {
 
   const navItems = [
     { path: '/', label: 'Home', icon: '🏠' },
+    { path: '/build-finder', label: 'Build Finder', icon: '🔧' },
     { path: '/favorites', label: 'Favorites', icon: '⭐' },
     { path: '/about', label: 'About', icon: 'ℹ️' },
   ];

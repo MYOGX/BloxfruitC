@@ -528,4 +528,331 @@
       }
     ]
   }
+  ,
+  {
+    "id": "leopard",
+    "name": "Leopard",
+    "rarity": "Mythical",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/leopard.png",
+    "description": "The strongest Beast fruit with incredible speed and devastating damage. Excellent for aggressive PvP.",
+    "moves": [
+      {"name": "Finger Revolver", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Rapid finger gun shots"},
+      {"name": "Spiraling Kick", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Spinning kick that breaks instinct"},
+      {"name": "Body Flicker", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Teleport behind opponent"},
+      {"name": "Transformation", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Transform into leopard form"},
+      {"name": "Prey's Perception", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Ultimate dash attack"}
+    ],
+    "combos": [
+      {
+        "id": "leopard-combo-1",
+        "name": "Speed Blitz",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Transform with Leopard V", "Use Leopard F to close distance and break instinct", "Follow with CDK Z → X", "Leopard X for additional damage", "Finish with Godhuman C"],
+        "notation": "Leopard V → F → CDK Z → X → Leopard X → Godhuman C",
+        "damageEstimate": "~14,000-16,000",
+        "notes": "Extremely fast combo. The transformation enhances all your moves significantly.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Dragon Talon"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "leopard-combo-2",
+        "name": "Hit and Run Leopard",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Transform with V", "Teleport behind with Leopard C", "Leopard F instantly", "Leopard X while they're stunned", "Repeat C → F pattern"],
+        "notation": "Leopard V → C (behind) → F → X → repeat",
+        "damageEstimate": "~12,000-15,000",
+        "notes": "Use superior mobility to confuse opponents. Very hard to counter.",
+        "recommendedPairings": {"swords": ["Tushita"], "fightingStyles": ["Godhuman", "Sharkman Karate"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "venom",
+    "name": "Venom",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/venom.png",
+    "description": "Deadly poison fruit with strong DOT damage and transformation. Great for wearing down opponents.",
+    "moves": [
+      {"name": "Toxic Fog", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Create poisonous fog zone"},
+      {"name": "Noxious Shot", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Poison projectile that breaks instinct"},
+      {"name": "Poison Daggers", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Throw multiple poison daggers"},
+      {"name": "Transformation", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Transform into venom demon"},
+      {"name": "Fury Meter", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "AOE poison explosion"}
+    ],
+    "combos": [
+      {
+        "id": "venom-combo-1",
+        "name": "Poison Pressure",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Transform with Venom V", "Use Venom X to break instinct", "Follow with Venom C", "Use Godhuman Z → C", "Venom Z for DOT damage"],
+        "notation": "Venom V → X → C → Godhuman Z → C → Venom Z",
+        "damageEstimate": "~9,000-11,000 + DOT",
+        "notes": "Poison damage over time adds up quickly. Keep pressure on opponent.",
+        "recommendedPairings": {"swords": ["Tushita", "Cursed Dual Katana"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "venom-combo-2",
+        "name": "Venom One-Shot",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": ["Transform with V", "Soul Guitar Z", "Venom F for massive damage", "CDK Z → X combo", "Venom X to finish"],
+        "notation": "Venom V → Soul Guitar Z → Venom F → CDK Z → X → Venom X",
+        "damageEstimate": "~16,000-19,000",
+        "notes": "Fury Meter (F) deals massive damage. Save it for key moments.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  }
+  ,
+  {
+    "id": "shadow",
+    "name": "Shadow",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/shadow.png",
+    "description": "Master of darkness with powerful combos and mobility. Great for both PvP and PvE.",
+    "moves": [
+      {"name": "Umbra", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Shadow beam attack"},
+      {"name": "Shade Nest", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Trap opponent in shadows"},
+      {"name": "Nightmare Leech", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Life-steal shadow attack"},
+      {"name": "Ravens Assault", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Shadow birds attack"},
+      {"name": "Shadow Escape", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Teleport using shadows"}
+    ],
+    "combos": [
+      {
+        "id": "shadow-combo-1",
+        "name": "Shadow Assassin",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Use Shadow X to trap", "Follow with Shadow V", "Teleport with Shadow F to reposition", "Shadow C for life-steal", "Godhuman Z → C to finish"],
+        "notation": "Shadow X → V → F → C → Godhuman Z → C",
+        "damageEstimate": "~10,000-12,000",
+        "notes": "Shadow F is great for repositioning mid-combo. Use it to confuse opponents.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Godhuman", "Electric Claw"], "guns": ["Soul Guitar", "Kabucha"]}
+      },
+      {
+        "id": "shadow-combo-2",
+        "name": "Dark Burst",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": ["Soul Guitar Z", "Shadow V → X combo", "CDK Z → X", "Shadow C", "Godhuman Z → C"],
+        "notation": "Soul Guitar Z → Shadow V → X → CDK Z → X → Shadow C → Godhuman Z → C",
+        "damageEstimate": "~15,000-17,000",
+        "notes": "High damage combo with life-steal. Shadow C helps recover HP.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "phoenix",
+    "name": "Phoenix",
+    "rarity": "Legendary",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/phoenix.png",
+    "description": "Mythical bird fruit with healing and flight. Great sustainability in long fights.",
+    "moves": [
+      {"name": "Cannon", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Fire projectile"},
+      {"name": "Hybrid Flight", "key": "X", "stunCapability": false, "instinctBreak": false, "description": "Fly and heal"},
+      {"name": "Full Beast", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Transform into full phoenix"},
+      {"name": "Regeneration Flames", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "AOE fire attack with healing"},
+      {"name": "Flames of Rebirth", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Passive healing"}
+    ],
+    "combos": [
+      {
+        "id": "phoenix-combo-1",
+        "name": "Phoenix Tank",
+        "difficulty": "Beginner",
+        "playstyle": "Hybrid",
+        "steps": ["Transform with Phoenix C", "Use Phoenix V for AOE", "Trade M1s while healing", "CDK Z → X when opportunity arises", "Use X to heal and reposition"],
+        "notation": "Phoenix C → V → M1s → CDK Z → X → Phoenix X (heal)",
+        "damageEstimate": "~8,000-10,000",
+        "notes": "Phoenix excels in prolonged fights. Use healing to outlast opponents.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Pole v2"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "light",
+    "name": "Light",
+    "rarity": "Rare",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/light.png",
+    "description": "Fastest fruit in the game with incredible mobility and range. Great for hit-and-run tactics.",
+    "moves": [
+      {"name": "Light Kick", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Rapid light speed kick"},
+      {"name": "Shining Flight", "key": "X", "stunCapability": false, "instinctBreak": false, "description": "Fly at light speed"},
+      {"name": "Reflection Kick", "key": "C", "stunCapability": true, "instinctBreak": true, "description": "Teleport kick that breaks instinct"},
+      {"name": "Light Ray", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Long range beam"},
+      {"name": "Light Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Passive light speed flight"}
+    ],
+    "combos": [
+      {
+        "id": "light-combo-1",
+        "name": "Speed of Light",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Use Light C to teleport and break instinct", "Immediately Light Z", "Light V from range", "Superhuman Z → C to finish"],
+        "notation": "Light C → Z → V → Superhuman Z → C",
+        "damageEstimate": "~7,000-9,000",
+        "notes": "Use superior speed to avoid damage. Great for hit-and-run playstyle.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana"], "fightingStyles": ["Superhuman", "Electric Claw"], "guns": ["Kabucha"]}
+      },
+      {
+        "id": "light-combo-2",
+        "name": "Light Sword Hybrid",
+        "difficulty": "Advanced",
+        "playstyle": "Sword Main",
+        "steps": ["Light C to close gap", "CDK Z → X combo", "Light Z", "Godhuman Z → C", "Light V to disengage"],
+        "notation": "Light C → CDK Z → X → Light Z → Godhuman Z → C → Light V",
+        "damageEstimate": "~12,000-14,000",
+        "notes": "Combine Light mobility with sword damage for devastating results.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  }
+  ,
+  {
+    "id": "magma",
+    "name": "Magma",
+    "rarity": "Rare",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/magma.png",
+    "description": "Powerful elemental fruit with high damage output. Great for aggressive play.",
+    "moves": [
+      {"name": "Magma Fist", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Explosive magma punch"},
+      {"name": "Magma Column", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Rising magma pillar"},
+      {"name": "Magma Clap", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "AOE magma explosion"},
+      {"name": "Magma Meteor", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Rain down magma meteors"},
+      {"name": "Magma Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly using magma"}
+    ],
+    "combos": [
+      {
+        "id": "magma-combo-1",
+        "name": "Volcanic Eruption",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Start with Magma X to break instinct", "Magma V for massive AOE", "Magma C while stunned", "Superhuman Z → C to finish"],
+        "notation": "Magma X → V → C → Superhuman Z → C",
+        "damageEstimate": "~9,000-11,000",
+        "notes": "High AOE damage. Great against multiple opponents.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana"], "fightingStyles": ["Superhuman", "Dark Step"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "rumble",
+    "name": "Rumble",
+    "rarity": "Legendary",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/rumble.png",
+    "description": "Electric fruit with high damage and stun potential. Excellent for controlling fights.",
+    "moves": [
+      {"name": "Thunder Burst", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Electric burst attack"},
+      {"name": "Sky Thunder", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Call down lightning"},
+      {"name": "Thunder Bomb", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Electric explosion"},
+      {"name": "Electric Teleport", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Teleport using electricity"},
+      {"name": "Rumble Dragon", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Summon electric dragon"}
+    ],
+    "combos": [
+      {
+        "id": "rumble-combo-1",
+        "name": "Electric Storm",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Rumble X to break instinct", "Teleport with Rumble V", "Rumble F for massive damage", "Electric Claw Z → C", "Rumble C to finish"],
+        "notation": "Rumble X → V → F → Electric Claw Z → C → Rumble C",
+        "damageEstimate": "~11,000-13,000",
+        "notes": "Rumble Dragon (F) is the key damage dealer. Time it when opponent can't escape.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Electric Claw", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "quake",
+    "name": "Quake",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/quake.png",
+    "description": "Devastating earthquake fruit with massive AOE damage. Great for controlling space.",
+    "moves": [
+      {"name": "Quake Punch", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Earthquake punch"},
+      {"name": "Quake Wave", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Shockwave that breaks instinct"},
+      {"name": "Seaquake", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Water-based quake"},
+      {"name": "Air Quake", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Aerial shockwave"},
+      {"name": "Quake Erupt", "key": "F", "stunCapability": true, "instinctBreak": false, "description": "Ground eruption"}
+    ],
+    "combos": [
+      {
+        "id": "quake-combo-1",
+        "name": "Shockwave Devastation",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Quake X to break instinct", "Quake V for air damage", "Quake Z on landing", "Godhuman Z → C", "Quake F to finish"],
+        "notation": "Quake X → V → Z → Godhuman Z → C → Quake F",
+        "damageEstimate": "~10,000-12,500",
+        "notes": "Excellent AOE control. Great for team fights.",
+        "recommendedPairings": {"swords": ["Bisento", "Pole v2"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "spirit",
+    "name": "Spirit",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/spirit.png",
+    "description": "Versatile fruit with both offensive and defensive capabilities. Great all-rounder.",
+    "moves": [
+      {"name": "Frostfire Grasp", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Ice and fire grab"},
+      {"name": "Wrath of Ra", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Sun god attack"},
+      {"name": "End of Times", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Apocalyptic attack"},
+      {"name": "World of Spirits", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Spirit realm attack"},
+      {"name": "Soul Snatcher", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Spirit dash"}
+    ],
+    "combos": [
+      {
+        "id": "spirit-combo-1",
+        "name": "Elemental Chaos",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Spirit X to break instinct", "Spirit V for massive damage", "Spirit C while stunned", "Godhuman Z → C", "Spirit Z to finish"],
+        "notation": "Spirit X → V → C → Godhuman Z → C → Spirit Z",
+        "damageEstimate": "~13,000-15,000",
+        "notes": "Very high damage potential. Timing is crucial for landing all moves.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "blizzard",
+    "name": "Blizzard",
+    "rarity": "Legendary",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/blizzard.png",
+    "description": "Ice and snow fruit with strong crowd control. Great for slowing down opponents.",
+    "moves": [
+      {"name": "Snowflake Shuriken", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Ice projectiles"},
+      {"name": "Blizzard Domain", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Create blizzard zone"},
+      {"name": "Ice Spikes", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Rising ice spikes"},
+      {"name": "Frozen Dragon", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Ice dragon attack"},
+      {"name": "Blizzard Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly on ice"}
+    ],
+    "combos": [
+      {
+        "id": "blizzard-combo-1",
+        "name": "Frozen Wasteland",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Blizzard X to create zone and break instinct", "Blizzard V while frozen", "Blizzard C for additional freeze", "Electric Claw Z → C", "Blizzard Z to finish"],
+        "notation": "Blizzard X → V → C → Electric Claw Z → C → Blizzard Z",
+        "damageEstimate": "~10,500-12,500",
+        "notes": "Keep opponents frozen in your domain. Great area control.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Electric Claw", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  }
 ]
