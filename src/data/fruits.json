@@ -1,0 +1,531 @@
+[
+  {
+    "id": "dough",
+    "name": "Dough",
+    "rarity": "Mythical",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/dough.png",
+    "description": "A versatile fruit with excellent combo potential and mobility. Awakened Dough is one of the strongest PvP fruits in the game.",
+    "moves": [
+      {
+        "name": "Fried Dough",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Launches multiple dough fists that deal damage and stun"
+      },
+      {
+        "name": "Scorching Donut",
+        "key": "X",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Creates a large donut projectile that breaks instinct"
+      },
+      {
+        "name": "Carved Dough",
+        "key": "C",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Dashes forward and grabs opponent"
+      },
+      {
+        "name": "Restless Dough Barrage",
+        "key": "V",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Ultimate move with high damage and instinct break"
+      },
+      {
+        "name": "Roller Donut",
+        "key": "F",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Mobility move for repositioning"
+      }
+    ],
+    "combos": [
+      {
+        "id": "dough-combo-1",
+        "name": "Awakened Dough Basic",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Start with Dough V to break instinct",
+          "Follow up with Dough X while enemy is stunned",
+          "Use Godhuman Z for additional damage",
+          "Finish with Godhuman C for knockback"
+        ],
+        "notation": "Dough V → X → Godhuman Z → C",
+        "damageEstimate": "~8,000-10,000",
+        "notes": "This is the bread and butter combo for Dough users. Make sure V lands to guarantee the rest of the combo.",
+        "recommendedPairings": {
+          "swords": ["Tushita", "Cursed Dual Katana"],
+          "fightingStyles": ["Godhuman", "Superhuman"],
+          "guns": ["Soul Guitar", "Acidum Rifle"]
+        }
+      },
+      {
+        "id": "dough-combo-2",
+        "name": "One-Shot Dough",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Start with Soul Guitar Z to break instinct",
+          "Immediately use Dough V",
+          "Follow with Dough X + C combo",
+          "Use CDK Z → X for massive damage",
+          "Finish with Godhuman Z → C"
+        ],
+        "notation": "Soul Guitar Z → Dough V → X → C → CDK Z → X → Godhuman Z → C",
+        "damageEstimate": "~15,000-18,000",
+        "notes": "Advanced combo requiring precise timing. Can one-shot most opponents if executed correctly.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana", "Tushita"],
+          "fightingStyles": ["Godhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "dough-combo-3",
+        "name": "Safe Dough Poke",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Use Dough X from range to break instinct",
+          "Dash in with Dough F",
+          "Use Dough C to grab",
+          "Follow with Godhuman Z",
+          "Back off with Dough F"
+        ],
+        "notation": "Dough X → F → C → Godhuman Z → F (retreat)",
+        "damageEstimate": "~6,000-8,000",
+        "notes": "Safer combo for fighting skilled opponents. Allows you to disengage quickly.",
+        "recommendedPairings": {
+          "swords": ["Tushita"],
+          "fightingStyles": ["Godhuman", "Sharkman Karate"],
+          "guns": ["Kabucha"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "dragon",
+    "name": "Dragon",
+    "rarity": "Mythical",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/dragon.png",
+    "description": "The ultimate transformation fruit with devastating area damage. Excellent for PvP when transformed.",
+    "moves": [
+      {
+        "name": "Dragon Rush",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Rush forward in dragon form dealing damage"
+      },
+      {
+        "name": "Dragon Breath",
+        "key": "X",
+        "stunCapability": false,
+        "instinctBreak": true,
+        "description": "Breathe fire that breaks instinct"
+      },
+      {
+        "name": "Dragon Explosion",
+        "key": "C",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Create an explosion around you"
+      },
+      {
+        "name": "Transformation",
+        "key": "V",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Transform into full dragon form"
+      },
+      {
+        "name": "Dragon Flight",
+        "key": "F",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Fly in dragon form"
+      }
+    ],
+    "combos": [
+      {
+        "id": "dragon-combo-1",
+        "name": "Transform Dragon",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Transform with Dragon V",
+          "Use Dragon C to break instinct and stun",
+          "Follow with Dragon X for damage",
+          "Use Godhuman Z → C while in air"
+        ],
+        "notation": "Dragon V → C → X → Godhuman Z → C",
+        "damageEstimate": "~9,000-11,000",
+        "notes": "Basic transformation combo. Dragon C is key to landing the rest of the combo.",
+        "recommendedPairings": {
+          "swords": ["Tushita", "Cursed Dual Katana"],
+          "fightingStyles": ["Godhuman", "Dragon Talon"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "dragon-combo-2",
+        "name": "Aerial Dragon Assault",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Transform with Dragon V",
+          "Fly above opponent with Dragon F",
+          "Drop down with Dragon C",
+          "Immediately use CDK Z → X",
+          "Finish with Dragon Talon Z → X → C"
+        ],
+        "notation": "Dragon V → F (position) → C → CDK Z → X → Dragon Talon Z → X → C",
+        "damageEstimate": "~14,000-17,000",
+        "notes": "Advanced aerial combo. Positioning is crucial for landing Dragon C from above.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana"],
+          "fightingStyles": ["Dragon Talon", "Godhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "ice",
+    "name": "Ice",
+    "rarity": "Rare",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/ice.png",
+    "description": "A defensive fruit with crowd control abilities. Great for freezing opponents and controlling space.",
+    "moves": [
+      {
+        "name": "Ice Spears",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Launch ice spears that freeze on hit"
+      },
+      {
+        "name": "Ice Surge",
+        "key": "X",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Create a wave of ice that breaks instinct"
+      },
+      {
+        "name": "Glacial Epoch",
+        "key": "C",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Freeze the ground in an area"
+      },
+      {
+        "name": "Ice Bird",
+        "key": "V",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Summon an ice bird projectile"
+      },
+      {
+        "name": "Ice Skating",
+        "key": "F",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Skate on ice for mobility"
+      }
+    ],
+    "combos": [
+      {
+        "id": "ice-combo-1",
+        "name": "Freeze Lock",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Use Ice X to break instinct",
+          "Follow with Ice C to freeze ground",
+          "Use Superhuman Z while frozen",
+          "Finish with Ice Z for additional freeze"
+        ],
+        "notation": "Ice X → C → Superhuman Z → Ice Z",
+        "damageEstimate": "~6,000-7,500",
+        "notes": "Simple freeze combo. Ice C keeps opponent in place for easy follow-ups.",
+        "recommendedPairings": {
+          "swords": ["Saber", "Bisento"],
+          "fightingStyles": ["Superhuman", "Electric Claw"],
+          "guns": ["Kabucha"]
+        }
+      },
+      {
+        "id": "ice-combo-2",
+        "name": "Ice Prison",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Start with Ice X to break instinct",
+          "Use Ice C immediately",
+          "Dash in with Ice F",
+          "Use Saber Z → X combo",
+          "Finish with Electric Claw C"
+        ],
+        "notation": "Ice X → C → Ice F → Saber Z → X → Electric Claw C",
+        "damageEstimate": "~8,000-9,500",
+        "notes": "Ice F allows you to close distance while opponent is frozen. Good for sword mains.",
+        "recommendedPairings": {
+          "swords": ["Saber", "Triple Katana"],
+          "fightingStyles": ["Electric Claw", "Superhuman"],
+          "guns": ["Bizarre Rifle"]
+        }
+      },
+      {
+        "id": "ice-combo-3",
+        "name": "Defensive Ice",
+        "difficulty": "Beginner",
+        "playstyle": "Sword Main",
+        "steps": [
+          "Use Ice C to create zone",
+          "Wait for opponent approach",
+          "Counter with Ice X when they enter",
+          "Follow with your sword Z → X",
+          "Use Ice Z if they try to escape"
+        ],
+        "notation": "Ice C (zone) → Ice X (counter) → Sword Z → X → Ice Z",
+        "damageEstimate": "~7,000-8,500",
+        "notes": "Defensive playstyle. Use Ice C to control space and punish aggressive opponents.",
+        "recommendedPairings": {
+          "swords": ["Bisento", "Pole v2"],
+          "fightingStyles": ["Superhuman", "Dark Step"],
+          "guns": ["Kabucha"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "buddha",
+    "name": "Buddha",
+    "rarity": "Legendary",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/buddha.png",
+    "description": "The king of tank fruits. Transform into a giant Buddha with massive defense and M1 damage boost.",
+    "moves": [
+      {
+        "name": "Impact",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Slam the ground dealing area damage"
+      },
+      {
+        "name": "Buddha Leap",
+        "key": "X",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Leap forward in Buddha form"
+      },
+      {
+        "name": "Buddha Form",
+        "key": "C",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Transform into Buddha (stay transformed)"
+      },
+      {
+        "name": "Retribution Dash",
+        "key": "V",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Dash forward breaking instinct"
+      },
+      {
+        "name": "Heavenly Impact",
+        "key": "F",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Powerful ground slam"
+      }
+    ],
+    "combos": [
+      {
+        "id": "buddha-combo-1",
+        "name": "Buddha Sword Main",
+        "difficulty": "Beginner",
+        "playstyle": "Sword Main",
+        "steps": [
+          "Transform with Buddha C",
+          "Use Buddha V to break instinct and close gap",
+          "Spam sword M1s (enhanced by Buddha)",
+          "Use sword Z ability when they try to escape",
+          "Continue M1 spam"
+        ],
+        "notation": "Buddha C → V → M1 spam → Sword Z → M1 spam",
+        "damageEstimate": "~10,000-13,000",
+        "notes": "Buddha's main strength is M1 spam. Stay in form and pressure with enhanced sword hits.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana", "Tushita", "Pole v2"],
+          "fightingStyles": ["Godhuman", "Superhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "buddha-combo-2",
+        "name": "Buddha Hybrid",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Transform with Buddha C",
+          "Use Buddha V to break instinct",
+          "Buddha F for additional stun",
+          "CDK Z → X combo",
+          "M1 spam with CDK",
+          "Godhuman Z → C when they're low"
+        ],
+        "notation": "Buddha C → V → F → CDK Z → X → M1s → Godhuman Z → C",
+        "damageEstimate": "~14,000-16,000",
+        "notes": "Combines Buddha's tankiness with CDK burst damage. Very strong in extended fights.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana", "Tushita"],
+          "fightingStyles": ["Godhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "buddha-combo-3",
+        "name": "Buddha Tank",
+        "difficulty": "Beginner",
+        "playstyle": "Sword Main",
+        "steps": [
+          "Transform with Buddha C",
+          "Trade M1s (you take less damage)",
+          "Use Buddha V when they back off",
+          "Continue M1 pressure",
+          "Use Buddha Z if they jump",
+          "Maintain transformation and pressure"
+        ],
+        "notation": "Buddha C → M1 trade → Buddha V (chase) → M1s → Buddha Z → M1s",
+        "damageEstimate": "~9,000-12,000",
+        "notes": "Simple but effective. Buddha's defense lets you win M1 trades. Keep the pressure on.",
+        "recommendedPairings": {
+          "swords": ["Pole v2", "Tushita"],
+          "fightingStyles": ["Superhuman", "Electric Claw"],
+          "guns": ["Kabucha"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "kitsune",
+    "name": "Kitsune",
+    "rarity": "Mythical",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/kitsune.png",
+    "description": "A mythical fox fruit with transformation abilities and powerful crowd control. Great mobility and mixup potential.",
+    "moves": [
+      {
+        "name": "Tai Spiral",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Create spiraling tails that damage and stun"
+      },
+      {
+        "name": "Celestial Shower",
+        "key": "X",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Rain down projectiles that break instinct"
+      },
+      {
+        "name": "Mythical Swipe",
+        "key": "C",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Swipe with tails in an area"
+      },
+      {
+        "name": "Fox Form",
+        "key": "V",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Transform into full Kitsune form"
+      },
+      {
+        "name": "Spirit Dash",
+        "key": "F",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Dash forward as a spirit fox"
+      }
+    ],
+    "combos": [
+      {
+        "id": "kitsune-combo-1",
+        "name": "Fox Hunt Basic",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Transform with Kitsune V",
+          "Use Kitsune X to break instinct from range",
+          "Dash in with Kitsune F",
+          "Use Kitsune C for stun",
+          "Follow with Godhuman Z → C"
+        ],
+        "notation": "Kitsune V → X → F → C → Godhuman Z → C",
+        "damageEstimate": "~8,500-10,500",
+        "notes": "Transformation enhances all abilities. Use F for quick repositioning and mixups.",
+        "recommendedPairings": {
+          "swords": ["Tushita", "Cursed Dual Katana"],
+          "fightingStyles": ["Godhuman", "Sharkman Karate"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "kitsune-combo-2",
+        "name": "Spirit Fox Burst",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Transform with Kitsune V",
+          "Use Soul Guitar Z to break instinct",
+          "Kitsune X for additional instinct break",
+          "Dash with Kitsune F behind opponent",
+          "CDK Z → X from behind",
+          "Kitsune C → Godhuman Z → C"
+        ],
+        "notation": "Kitsune V → Soul Guitar Z → Kitsune X → F (reposition) → CDK Z → X → Kitsune C → Godhuman Z → C",
+        "damageEstimate": "~15,000-18,000",
+        "notes": "High skill combo using Kitsune F for positioning. Can confuse opponents with the dash.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana"],
+          "fightingStyles": ["Godhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "kitsune-combo-3",
+        "name": "Hit and Run Fox",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Use Kitsune X from range",
+          "Dash in with Kitsune F",
+          "Use Kitsune Z quickly",
+          "Back out with Kitsune F",
+          "Repeat poke pattern"
+        ],
+        "notation": "Kitsune X → F (in) → Z → F (out) → repeat",
+        "damageEstimate": "~5,000-7,000 per cycle",
+        "notes": "Safe poke combo. Use superior mobility to avoid trading damage. Great vs aggressive players.",
+        "recommendedPairings": {
+          "swords": ["Tushita"],
+          "fightingStyles": ["Sharkman Karate", "Superhuman"],
+          "guns": ["Kabucha"]
+        }
+      }
+    ]
+  }
+]
