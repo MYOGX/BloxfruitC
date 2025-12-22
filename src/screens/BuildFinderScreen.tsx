@@ -79,7 +79,7 @@ export default function BuildFinderScreen() {
           Build Finder
         </h1>
         <p className="text-lg text-[#8b949e] font-medium">
-          Check off all your owned items to see available combos based on your inventory
+          Select items to see available combos based on your selections
         </p>
       </div>
 
