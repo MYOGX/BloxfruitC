@@ -1396,5 +1396,240 @@
         "recommendedPairings": {"swords": ["Katana", "Cutlass"], "fightingStyles": ["Combat"], "guns": ["Flintlock"]}
       }
     ]
+  },
+  {
+    "id": "paw",
+    "name": "Paw",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/paw.png",
+    "description": "Legendary fruit with powerful push attacks and teleportation. Great mobility and damage.",
+    "moves": [
+      {"name": "Heavy Paw", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Heavy paw strike"},
+      {"name": "Paw Barrage", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Multiple paw strikes"},
+      {"name": "Knock", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Knock opponent away"},
+      {"name": "Dimensional Door", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Teleport to location"},
+      {"name": "Pain Shield", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Absorb damage"}
+    ],
+    "combos": [
+      {
+        "id": "paw-combo-1",
+        "name": "Paw Pressure",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Paw X to break instinct and damage", "Teleport behind with Paw V", "CDK Z → X from behind", "Paw C to knock away", "Godhuman Z → C"],
+        "notation": "Paw X → V (behind) → CDK Z → X → Paw C → Godhuman Z → C",
+        "damageEstimate": "~12,000-14,500",
+        "notes": "Use teleport for positioning. Paw attacks have great range.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar", "Kabucha"]}
+      },
+      {
+        "id": "paw-combo-2",
+        "name": "Teleport Assault",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Paw X for initial damage", "Teleport with Paw V to reposition", "Paw Z for heavy strike", "Paw C to create distance", "Repeat pattern"],
+        "notation": "Paw X → V → Z → C → repeat",
+        "damageEstimate": "~10,000-12,000 per cycle",
+        "notes": "High mobility playstyle. Very hard to catch. Use Pain Shield (F) defensively.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Godhuman", "Sharkman Karate"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "falcon",
+    "name": "Falcon",
+    "rarity": "Rare",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/falcon.png",
+    "description": "Fast aerial beast fruit with dive attacks. Great mobility and hit-and-run tactics.",
+    "moves": [
+      {"name": "Plumage Archer", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Fire feathers"},
+      {"name": "Wind Burst", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Wind blast"},
+      {"name": "Spiral Dive", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Diving attack"},
+      {"name": "Falcon Soar", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Transform and fly"},
+      {"name": "Talon Slash", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Claw attack"}
+    ],
+    "combos": [
+      {
+        "id": "falcon-combo-1",
+        "name": "Aerial Hunter",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Transform with Falcon V", "Falcon X to break instinct", "Falcon C dive attack", "Falcon F for claws", "Electric Claw Z → C"],
+        "notation": "Falcon V → X → C → F → Electric Claw Z → C",
+        "damageEstimate": "~9,000-11,000",
+        "notes": "Use aerial advantage. Dive attacks deal bonus damage from height.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana"], "fightingStyles": ["Electric Claw", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "rarity": "Uncommon",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/diamond.png",
+    "description": "Defensive crystal fruit with damage reduction. Tank through opponent attacks.",
+    "moves": [
+      {"name": "Diamond Spikes", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Crystal spike attack"},
+      {"name": "Diamond Rampart", "key": "X", "stunCapability": false, "instinctBreak": false, "description": "Defensive crystal shield"},
+      {"name": "Diamond Punch", "key": "C", "stunCapability": true, "instinctBreak": true, "description": "Heavy crystal punch"},
+      {"name": "Brilliance", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Crystal explosion"},
+      {"name": "Diamond Body", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Passive damage reduction"}
+    ],
+    "combos": [
+      {
+        "id": "diamond-combo-1",
+        "name": "Diamond Tank",
+        "difficulty": "Beginner",
+        "playstyle": "Sword Main",
+        "steps": ["Activate Diamond X for shield", "Trade hits (take less damage)", "Diamond C to break instinct", "Sword Z → X combo", "Diamond V to finish"],
+        "notation": "Diamond X → trade → Diamond C → Sword Z → X → Diamond V",
+        "damageEstimate": "~7,000-9,000",
+        "notes": "Diamond body reduces damage taken. Good for aggressive sword users.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana", "Tushita"], "fightingStyles": ["Superhuman", "Combat"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "string",
+    "name": "String",
+    "rarity": "Rare",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/string.png",
+    "description": "Versatile string manipulation fruit. Good crowd control and combos.",
+    "moves": [
+      {"name": "God's Highway", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Create string path"},
+      {"name": "Overheat", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "String whip attack"},
+      {"name": "Eternal White", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "String bird attack"},
+      {"name": "Deadly Sting", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Multiple string strikes"},
+      {"name": "String Path", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Mobility string"}
+    ],
+    "combos": [
+      {
+        "id": "string-combo-1",
+        "name": "String Control",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["String X to break instinct", "String V for multiple hits", "String C for bird", "Superhuman Z → C", "String F to escape"],
+        "notation": "String X → V → C → Superhuman Z → C → String F",
+        "damageEstimate": "~8,500-10,500",
+        "notes": "Use God's Highway (Z) for mobility. String Path (F) for escapes.",
+        "recommendedPairings": {"swords": ["Saber", "Tushita"], "fightingStyles": ["Superhuman", "Electric Claw"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "chop",
+    "name": "Chop",
+    "rarity": "Common",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/chop.png",
+    "description": "Split your body into parts. Immune to sword attacks. Great for beginners.",
+    "moves": [
+      {"name": "Chop Kick", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Detached kick"},
+      {"name": "Chop Tornado", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Spinning body parts"},
+      {"name": "Detach", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Split body"},
+      {"name": "Chop Smash", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Body slam"},
+      {"name": "Chop Immunity", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Passive sword immunity"}
+    ],
+    "combos": [
+      {
+        "id": "chop-combo-1",
+        "name": "Chop Basic",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Chop X for tornado", "Chop Z for kick", "Chop V for slam", "Combat Z"],
+        "notation": "Chop X → Z → V → Combat Z",
+        "damageEstimate": "~4,500-6,000",
+        "notes": "Great for beginners. Immune to sword users. Use Detach (C) to dodge.",
+        "recommendedPairings": {"swords": ["Katana", "Cutlass"], "fightingStyles": ["Combat", "Dark Step"], "guns": ["Flintlock", "Musket"]}
+      }
+    ]
+  },
+  {
+    "id": "spring",
+    "name": "Spring",
+    "rarity": "Common",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/spring.png",
+    "description": "Bouncy spring attacks with good mobility. Fun beginner fruit.",
+    "moves": [
+      {"name": "Spring Leap", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Jump high"},
+      {"name": "Spring Cannon", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Spring punch"},
+      {"name": "Spring Snipe", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Long range spring"},
+      {"name": "Spring Emperor", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Heavy spring attack"},
+      {"name": "Spring Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Bounce around"}
+    ],
+    "combos": [
+      {
+        "id": "spring-combo-1",
+        "name": "Spring Bounce",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Spring X to engage", "Spring V for damage", "Spring Z to reposition", "Combat Z → X"],
+        "notation": "Spring X → V → Spring Z → Combat Z → X",
+        "damageEstimate": "~4,000-5,500",
+        "notes": "Use Spring Leap (Z) and Flight (F) for mobility. Good for beginners.",
+        "recommendedPairings": {"swords": ["Katana", "Cutlass"], "fightingStyles": ["Combat"], "guns": ["Flintlock"]}
+      }
+    ]
+  },
+  {
+    "id": "kilo",
+    "name": "Kilo",
+    "rarity": "Common",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/kilo.png",
+    "description": "Change your weight for attacks. Simple starter fruit.",
+    "moves": [
+      {"name": "Kilo Slam", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Heavy slam attack"},
+      {"name": "Kilo Smash", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Weight drop"},
+      {"name": "Kilo Rise", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Float upward"},
+      {"name": "10000 Kilo Press", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Maximum weight drop"},
+      {"name": "Weight Change", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Change weight"}
+    ],
+    "combos": [
+      {
+        "id": "kilo-combo-1",
+        "name": "Weight Drop",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Kilo C to rise", "Kilo X to drop with weight", "Kilo V for heavy press", "Combat Z"],
+        "notation": "Kilo C → X → V → Combat Z",
+        "damageEstimate": "~3,500-5,000",
+        "notes": "Simple combo. Good for learning basics. 10000 Kilo Press is strongest move.",
+        "recommendedPairings": {"swords": ["Katana"], "fightingStyles": ["Combat"], "guns": ["Flintlock"]}
+      }
+    ]
+  },
+  {
+    "id": "revive",
+    "name": "Revive",
+    "rarity": "Rare",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/revive.png",
+    "description": "Soul-based attacks with revival ability. Unique support capabilities.",
+    "moves": [
+      {"name": "Wandering Soul", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Soul projectile"},
+      {"name": "Resurrection", "key": "X", "stunCapability": false, "instinctBreak": false, "description": "Revive yourself once"},
+      {"name": "Soul Ruler", "key": "C", "stunCapability": true, "instinctBreak": true, "description": "Soul grab attack"},
+      {"name": "Cursed Slash", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Soul blade"},
+      {"name": "Soul Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly as soul"}
+    ],
+    "combos": [
+      {
+        "id": "revive-combo-1",
+        "name": "Soul Strike",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Revive C to grab", "Revive V for blade", "Revive Z for projectile", "Superhuman Z → C"],
+        "notation": "Revive C → V → Z → Superhuman Z → C",
+        "damageEstimate": "~7,500-9,500",
+        "notes": "Resurrection (X) allows you to revive once per life. Use strategically.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana"], "fightingStyles": ["Superhuman", "Dark Step"], "guns": ["Kabucha"]}
+      }
+    ]
   }
 ]
