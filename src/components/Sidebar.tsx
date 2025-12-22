@@ -1,4 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
+import type { Fruit } from '../types';
+import fruitsData from '../data/fruits.json';
+
+const fruits: Fruit[] = fruitsData as Fruit[];
+const totalFruits = fruits.length;
+const totalCombos = fruits.reduce((sum, fruit) => sum + fruit.combos.length, 0);
 
 export default function Sidebar() {
   const location = useLocation();
@@ -47,11 +53,11 @@ export default function Sidebar() {
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
             <span className="text-[#8b949e]">Fruits</span>
-            <span className="text-white font-bold">5</span>
+            <span className="text-white font-bold">{totalFruits}</span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-[#8b949e]">Combos</span>
-            <span className="text-white font-bold">13</span>
+            <span className="text-white font-bold">{totalCombos}</span>
           </div>
         </div>
       </div>
