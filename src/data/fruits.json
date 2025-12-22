@@ -854,5 +854,547 @@
         "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Electric Claw", "Superhuman"], "guns": ["Kabucha"]}
       }
     ]
+  },
+  {
+    "id": "trex",
+    "name": "T-Rex",
+    "rarity": "Legendary",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/trex.png",
+    "description": "Prehistoric beast fruit with powerful melee attacks and transformation. Great for close combat.",
+    "moves": [
+      {"name": "Tail Assault", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Powerful tail swipe"},
+      {"name": "Primal Roar", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Roar that breaks instinct"},
+      {"name": "Predator's Leap", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Jump and crash down"},
+      {"name": "Full Transformation", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Transform into T-Rex"},
+      {"name": "Rampage", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Charging attack"}
+    ],
+    "combos": [
+      {
+        "id": "trex-combo-1",
+        "name": "Prehistoric Rampage",
+        "difficulty": "Beginner",
+        "playstyle": "Hybrid",
+        "steps": ["Transform with T-Rex V", "Use T-Rex X to break instinct and stun", "T-Rex F for charging damage", "CDK Z → X combo", "T-Rex C to finish"],
+        "notation": "T-Rex V → X → F → CDK Z → X → T-Rex C",
+        "damageEstimate": "~11,000-13,500",
+        "notes": "Simple but effective. Transformation enhances all moves significantly.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita", "True Triple Katana"], "fightingStyles": ["Godhuman", "Dragon Talon"], "guns": ["Soul Guitar", "Kabucha"]}
+      },
+      {
+        "id": "trex-combo-2",
+        "name": "Apex Predator",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["T-Rex V transformation", "T-Rex X for instinct break", "M1 spam with enhanced damage", "T-Rex C when they try to escape", "Continue M1 pressure"],
+        "notation": "T-Rex V → X → M1 spam → T-Rex C → M1 spam",
+        "damageEstimate": "~10,000-12,000",
+        "notes": "Similar to Buddha playstyle. Use transformation M1s for consistent damage.",
+        "recommendedPairings": {"swords": ["Tushita", "Pole v2"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "gravity",
+    "name": "Gravity",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/gravity.png",
+    "description": "Control gravity to crush opponents. Excellent for crowd control and combos.",
+    "moves": [
+      {"name": "Gravity Push", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Push enemies away with gravity"},
+      {"name": "Gravity Obeisance", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Pull and slam opponents"},
+      {"name": "Meteor Rain", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Rain meteors from sky"},
+      {"name": "Boulder Flight", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Fly on meteor"},
+      {"name": "Gravity Field", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Create gravity well"}
+    ],
+    "combos": [
+      {
+        "id": "gravity-combo-1",
+        "name": "Gravitational Pull",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Use Gravity X to pull and break instinct", "Gravity C for meteor damage", "Gravity F for gravity well", "Godhuman Z → C", "Gravity Z to push away"],
+        "notation": "Gravity X → C → F → Godhuman Z → C → Gravity Z",
+        "damageEstimate": "~12,000-14,000",
+        "notes": "Pull enemies in with X, damage with C and F, then push away with Z. Great control.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Sharkman Karate"], "guns": ["Soul Guitar", "Acidum Rifle"]}
+      },
+      {
+        "id": "gravity-combo-2",
+        "name": "Meteor Shower",
+        "difficulty": "Advanced",
+        "playstyle": "Hybrid",
+        "steps": ["Soul Guitar Z", "Gravity F to trap", "Gravity C for meteors", "CDK Z → X", "Gravity X to slam", "Godhuman C"],
+        "notation": "Soul Guitar Z → Gravity F → C → CDK Z → X → Gravity X → Godhuman C",
+        "damageEstimate": "~16,000-18,500",
+        "notes": "High damage combo. Gravity well traps opponents for guaranteed meteor hits.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "pain",
+    "name": "Pain",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/pain.png",
+    "description": "Inflict suffering on enemies with powerful attacks. Great burst damage potential.",
+    "moves": [
+      {"name": "Heavenly Strike", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Strike from above"},
+      {"name": "Misery Comet", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Comet that breaks instinct"},
+      {"name": "Suffering", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Rapid strikes"},
+      {"name": "Almighty Push", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Massive push attack"},
+      {"name": "Universal Pull", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Pull enemies toward you"}
+    ],
+    "combos": [
+      {
+        "id": "pain-combo-1",
+        "name": "Almighty Devastation",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Pain F to pull enemy", "Pain X to break instinct", "Pain V for massive damage", "Pain C rapid strikes", "Godhuman Z → C to finish"],
+        "notation": "Pain F → X → V → C → Godhuman Z → C",
+        "damageEstimate": "~14,000-16,500",
+        "notes": "Pain V (Almighty Push) is your main damage dealer. Use Pull to set it up.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "pain-combo-2",
+        "name": "Push and Pull",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Pain V to push away", "Pain F to pull back", "CDK Z → X", "Pain X", "Godhuman Z → C"],
+        "notation": "Pain V → F → CDK Z → X → Pain X → Godhuman Z → C",
+        "damageEstimate": "~13,000-15,000",
+        "notes": "Use push-pull mechanics to confuse opponents. Great mixup potential.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar", "Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "portal",
+    "name": "Portal",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/portal.png",
+    "description": "Master of space and teleportation. Ultimate mobility and repositioning.",
+    "moves": [
+      {"name": "Parallel Escape", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Teleport short distance"},
+      {"name": "Portal Dash", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Dash through portal breaking instinct"},
+      {"name": "Portal Jump", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Jump through portal"},
+      {"name": "World Warp", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Teleport anywhere on map"},
+      {"name": "Dimensional Rift", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Create portal that damages"}
+    ],
+    "combos": [
+      {
+        "id": "portal-combo-1",
+        "name": "Portal Ambush",
+        "difficulty": "Advanced",
+        "playstyle": "Sword Main",
+        "steps": ["Portal X to close distance", "CDK Z → X combo", "Portal Z to reposition", "Godhuman Z → C", "Portal F if they chase"],
+        "notation": "Portal X → CDK Z → X → Portal Z → Godhuman Z → C → Portal F",
+        "damageEstimate": "~13,000-15,000",
+        "notes": "Use portals to confuse and reposition. Very hard to predict.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Sharkman Karate"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "portal-combo-2",
+        "name": "Hit and Run Portal",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Portal X to engage", "Quick sword combo", "Portal Z to escape", "Repeat when cooldown ready"],
+        "notation": "Portal X → Sword combo → Portal Z (escape) → repeat",
+        "damageEstimate": "~7,000-9,000 per cycle",
+        "notes": "Safest Portal playstyle. Never commit too hard, always have escape ready.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Superhuman", "Electric Claw"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "gas",
+    "name": "Gas",
+    "rarity": "Rare",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/gas.png",
+    "description": "Poison gas fruit with area denial and DOT damage. Great for zoning.",
+    "moves": [
+      {"name": "Gas Bomb", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Throw gas bomb"},
+      {"name": "Gas Shower", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Rain poisonous gas"},
+      {"name": "Nox Breath", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Breathe toxic gas"},
+      {"name": "Blue Fire", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Create blue fire explosion"},
+      {"name": "Gas Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly using gas"}
+    ],
+    "combos": [
+      {
+        "id": "gas-combo-1",
+        "name": "Toxic Barrage",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Gas X to break instinct and poison", "Gas V for blue fire damage", "Gas C for additional DOT", "Superhuman Z → C", "Gas Z to maintain poison"],
+        "notation": "Gas X → V → C → Superhuman Z → C → Gas Z",
+        "damageEstimate": "~8,000-10,000 + DOT",
+        "notes": "Poison damage adds up over time. Keep gas effects active on opponent.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana"], "fightingStyles": ["Superhuman", "Dark Step"], "guns": ["Kabucha", "Bizarre Rifle"]}
+      },
+      {
+        "id": "gas-combo-2",
+        "name": "Zone Control Gas",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Gas C to create zone", "Gas X when they enter", "CDK Z → X", "Gas V for fire burst", "Electric Claw C"],
+        "notation": "Gas C (zone) → Gas X → CDK Z → X → Gas V → Electric Claw C",
+        "damageEstimate": "~11,000-13,000",
+        "notes": "Control space with gas zones. Force opponents into your damage.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Electric Claw", "Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "love",
+    "name": "Love",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/love.png",
+    "description": "Stone and petrification fruit. Great crowd control and defensive capabilities.",
+    "moves": [
+      {"name": "Love Beam", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Beam that petrifies"},
+      {"name": "Love Barrage", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Multiple love arrows"},
+      {"name": "Cologne Sphere", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Defensive sphere"},
+      {"name": "Love Trap", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Trap opponents in love"},
+      {"name": "Arrows of Imprisonment", "key": "F", "stunCapability": true, "instinctBreak": false, "description": "Arrow barrage"}
+    ],
+    "combos": [
+      {
+        "id": "love-combo-1",
+        "name": "Stone Prison",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Love V to trap", "Love X to break instinct", "Love F for arrow damage", "Godhuman Z → C", "Love Z to petrify again"],
+        "notation": "Love V → X → F → Godhuman Z → C → Love Z",
+        "damageEstimate": "~9,500-11,500",
+        "notes": "Keep opponents petrified. Use defensive sphere when pressured.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Kabucha", "Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "spider",
+    "name": "Spider",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/spider.png",
+    "description": "Web-slinging fruit with great mobility and trap potential.",
+    "moves": [
+      {"name": "Venom Strike", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Poisonous strike"},
+      {"name": "Spider Cocoon", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Trap in web"},
+      {"name": "Gossamer Thread", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Swing on web"},
+      {"name": "Spider Swarm", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Summon spider swarm"},
+      {"name": "Web Sling", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Swing around map"}
+    ],
+    "combos": [
+      {
+        "id": "spider-combo-1",
+        "name": "Web Trap",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": ["Spider X to cocoon and break instinct", "Spider V for swarm damage", "CDK Z → X while trapped", "Spider Z", "Godhuman C"],
+        "notation": "Spider X → V → CDK Z → X → Spider Z → Godhuman C",
+        "damageEstimate": "~11,000-13,000",
+        "notes": "Spider X traps opponents perfectly for follow-ups. Use web mobility to escape.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Sharkman Karate"], "guns": ["Soul Guitar", "Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "sound",
+    "name": "Sound",
+    "rarity": "Legendary",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/sound.png",
+    "description": "Sonic waves and sound attacks. Great range and crowd control.",
+    "moves": [
+      {"name": "Claw", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Sound claw attack"},
+      {"name": "Roar", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Sonic roar"},
+      {"name": "Encore", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Sound wave barrage"},
+      {"name": "Symphonic Radiance", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Ultimate sound attack"},
+      {"name": "Tempo", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Speed boost"}
+    ],
+    "combos": [
+      {
+        "id": "sound-combo-1",
+        "name": "Sonic Boom",
+        "difficulty": "Intermediate",
+        "playstyle": "Fruit Main",
+        "steps": ["Sound X for roar", "Sound V for massive damage", "Sound C for follow-up", "Electric Claw Z → C", "Sound Z to finish"],
+        "notation": "Sound X → V → C → Electric Claw Z → C → Sound Z",
+        "damageEstimate": "~11,500-13,500",
+        "notes": "Symphonic Radiance (V) is your main damage source. Great AOE.",
+        "recommendedPairings": {"swords": ["Tushita", "Saber"], "fightingStyles": ["Electric Claw", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "mammoth",
+    "name": "Mammoth",
+    "rarity": "Legendary",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/mammoth.png",
+    "description": "Transform into massive mammoth with high defense and damage.",
+    "moves": [
+      {"name": "Mammoth Rush", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Charge forward"},
+      {"name": "Tusk Slash", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Slash with tusks"},
+      {"name": "Mammoth Transform", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Transform"},
+      {"name": "Glacial Breath", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Freeze breath"},
+      {"name": "Earthquake Stomp", "key": "F", "stunCapability": true, "instinctBreak": false, "description": "Ground stomp"}
+    ],
+    "combos": [
+      {
+        "id": "mammoth-combo-1",
+        "name": "Mammoth Tank",
+        "difficulty": "Beginner",
+        "playstyle": "Hybrid",
+        "steps": ["Transform with Mammoth C", "Mammoth X to break instinct", "Mammoth F for stomp", "M1 spam", "Mammoth V to freeze"],
+        "notation": "Mammoth C → X → F → M1 spam → Mammoth V",
+        "damageEstimate": "~10,000-12,500",
+        "notes": "Similar to Buddha. Tank damage while dealing consistent M1s.",
+        "recommendedPairings": {"swords": ["Tushita", "Pole v2", "Cursed Dual Katana"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "control",
+    "name": "Control",
+    "rarity": "Mythical",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/control.png",
+    "description": "Control objects and enemies. Ultimate battlefield control.",
+    "moves": [
+      {"name": "Gamma Rush", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Launch controlled object"},
+      {"name": "Echo Knife", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Controlled blade attack"},
+      {"name": "Teleport", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Teleport short distance"},
+      {"name": "Delta Storm", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Massive area control"},
+      {"name": "ROOM", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Create control zone"}
+    ],
+    "combos": [
+      {
+        "id": "control-combo-1",
+        "name": "Surgical Strike",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Control F to create ROOM", "Control X to break instinct", "Control V for massive damage", "Teleport with Control C", "CDK Z → X from new position"],
+        "notation": "Control F → X → V → C (teleport) → CDK Z → X",
+        "damageEstimate": "~14,000-16,500",
+        "notes": "ROOM enhances all abilities. Use teleport for positioning and mixups.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "control-combo-2",
+        "name": "Control Mastery",
+        "difficulty": "Expert",
+        "playstyle": "Hybrid",
+        "steps": ["Control F", "Soul Guitar Z", "Control V", "Teleport behind with C", "CDK Z → X", "Control X", "Godhuman Z → C"],
+        "notation": "Control F → Soul Guitar Z → Control V → C → CDK Z → X → Control X → Godhuman Z → C",
+        "damageEstimate": "~17,000-20,000",
+        "notes": "Expert combo requiring perfect execution. Can one-shot with full build.",
+        "recommendedPairings": {"swords": ["Cursed Dual Katana"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      }
+    ]
+  },
+  {
+    "id": "bomb",
+    "name": "Bomb",
+    "rarity": "Common",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/bomb.png",
+    "description": "Explosive attacks with high burst damage. Good for beginners.",
+    "moves": [
+      {"name": "Bomb Grab", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Grab and explode"},
+      {"name": "Targeted Bomb", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Aimed explosion"},
+      {"name": "Self Destruct", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Explode yourself"},
+      {"name": "Bomb Flight", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Fly with explosions"},
+      {"name": "Blast", "key": "F", "stunCapability": true, "instinctBreak": false, "description": "Forward blast"}
+    ],
+    "combos": [
+      {
+        "id": "bomb-combo-1",
+        "name": "Explosive Starter",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Bomb X for range", "Bomb Z to grab", "Bomb C for self-destruct damage", "Dark Step Z → C"],
+        "notation": "Bomb X → Z → C → Dark Step Z → C",
+        "damageEstimate": "~5,000-6,500",
+        "notes": "Good starter combo for new players. Simple but effective.",
+        "recommendedPairings": {"swords": ["Katana", "Cutlass"], "fightingStyles": ["Dark Step", "Combat"], "guns": ["Flintlock", "Musket"]}
+      }
+    ]
+  },
+  {
+    "id": "barrier",
+    "name": "Barrier",
+    "rarity": "Rare",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/barrier.png",
+    "description": "Create barriers for defense and offense. Great for defensive play.",
+    "moves": [
+      {"name": "Barrier Wall", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Create defensive wall"},
+      {"name": "Barrier Crash", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Crash barrier into enemy"},
+      {"name": "Barrier Prison", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Trap in barrier"},
+      {"name": "Barrier Towers", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Create barrier towers"},
+      {"name": "Barrier Stairs", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Create barrier stairs"}
+    ],
+    "combos": [
+      {
+        "id": "barrier-combo-1",
+        "name": "Defensive Barrier",
+        "difficulty": "Intermediate",
+        "playstyle": "Sword Main",
+        "steps": ["Barrier C to trap", "Barrier X to break instinct", "Sword Z → X combo", "Barrier V for towers", "Use Barrier Z for defense"],
+        "notation": "Barrier C → X → Sword Z → X → Barrier V → Barrier Z",
+        "damageEstimate": "~8,000-10,000",
+        "notes": "Use barriers defensively. Great for sword mains who need protection.",
+        "recommendedPairings": {"swords": ["Saber", "Triple Katana", "Tushita"], "fightingStyles": ["Superhuman", "Electric Claw"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "rubber",
+    "name": "Rubber",
+    "rarity": "Rare",
+    "type": "Natural",
+    "imageUrl": "/images/fruits/rubber.png",
+    "description": "Stretch and bounce attacks. Immune to bullets. Fun and versatile.",
+    "moves": [
+      {"name": "Rubber Pistol", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Stretching punch"},
+      {"name": "Rubber Rocket", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Launch yourself at enemy"},
+      {"name": "Rubber Gatling", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Rapid punch barrage"},
+      {"name": "Rubber Thor Elephant Gun", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Massive punch"},
+      {"name": "Rubber Slingshot", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Launch backwards"}
+    ],
+    "combos": [
+      {
+        "id": "rubber-combo-1",
+        "name": "Gum-Gum Barrage",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Rubber X to close distance", "Rubber V for big damage", "Rubber C for gatling", "Superhuman Z → C"],
+        "notation": "Rubber X → V → C → Superhuman Z → C",
+        "damageEstimate": "~7,500-9,000",
+        "notes": "Simple and fun. Thor Elephant Gun (V) is your main damage move.",
+        "recommendedPairings": {"swords": ["Saber", "Bisento"], "fightingStyles": ["Superhuman", "Combat"], "guns": ["Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "dark",
+    "name": "Dark",
+    "rarity": "Uncommon",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/dark.png",
+    "description": "Darkness manipulation with good crowd control. Gravity-based attacks.",
+    "moves": [
+      {"name": "Black Hole", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Create black hole that pulls"},
+      {"name": "Dark Bomb", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Explosive dark sphere"},
+      {"name": "Liberation", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Dark eruption"},
+      {"name": "Dimensional Slash", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Dark blade slash"},
+      {"name": "Dark Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly using darkness"}
+    ],
+    "combos": [
+      {
+        "id": "dark-combo-1",
+        "name": "Black Hole Trap",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Dark Z to pull with black hole", "Dark X to break instinct", "Dark C for eruption", "Dark Step Z → C"],
+        "notation": "Dark Z → X → C → Dark Step Z → C",
+        "damageEstimate": "~6,500-8,000",
+        "notes": "Black hole pulls opponents in. Great setup for other moves.",
+        "recommendedPairings": {"swords": ["Katana", "Saber"], "fightingStyles": ["Dark Step", "Superhuman"], "guns": ["Musket", "Kabucha"]}
+      }
+    ]
+  },
+  {
+    "id": "flame",
+    "name": "Flame",
+    "rarity": "Uncommon",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/flame.png",
+    "description": "Classic fire fruit with good damage and mobility. Great for beginners.",
+    "moves": [
+      {"name": "Fire Bullets", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Shoot fire bullets"},
+      {"name": "Prominence Burst", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Fire burst that breaks instinct"},
+      {"name": "Fire Column", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Rising fire pillar"},
+      {"name": "Fire Flight", "key": "V", "stunCapability": false, "instinctBreak": false, "description": "Fly with fire"},
+      {"name": "Flame Destroyer", "key": "F", "stunCapability": true, "instinctBreak": false, "description": "Powerful fire punch"}
+    ],
+    "combos": [
+      {
+        "id": "flame-combo-1",
+        "name": "Fire Assault",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Flame X for burst", "Flame C for pillar", "Flame F for punch", "Superhuman Z → C"],
+        "notation": "Flame X → C → F → Superhuman Z → C",
+        "damageEstimate": "~6,000-7,500",
+        "notes": "Beginner-friendly fruit. Good for learning combo basics.",
+        "recommendedPairings": {"swords": ["Katana", "Cutlass", "Saber"], "fightingStyles": ["Combat", "Superhuman"], "guns": ["Flintlock", "Musket"]}
+      }
+    ]
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "rarity": "Uncommon",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/sand.png",
+    "description": "Desert sand attacks with good range. Immune to physical attacks.",
+    "moves": [
+      {"name": "Sand Tornado", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Create sand tornado"},
+      {"name": "Desert Sword", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Sand blade attack"},
+      {"name": "Sand Coffin", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Trap in sand"},
+      {"name": "Heavy Sand", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Heavy sand attack"},
+      {"name": "Sand Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly on sand"}
+    ],
+    "combos": [
+      {
+        "id": "sand-combo-1",
+        "name": "Desert Storm",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Sand X for desert sword", "Sand C to trap", "Sand V while trapped", "Dark Step Z → C"],
+        "notation": "Sand X → C → V → Dark Step Z → C",
+        "damageEstimate": "~6,000-7,500",
+        "notes": "Sand Coffin (C) traps opponents nicely. Good for PvE and beginner PvP.",
+        "recommendedPairings": {"swords": ["Katana", "Saber"], "fightingStyles": ["Dark Step", "Combat"], "guns": ["Flintlock", "Musket"]}
+      }
+    ]
+  },
+  {
+    "id": "smoke",
+    "name": "Smoke",
+    "rarity": "Common",
+    "type": "Elemental",
+    "imageUrl": "/images/fruits/smoke.png",
+    "description": "Smoky attacks with decent mobility. Good starter elemental fruit.",
+    "moves": [
+      {"name": "Smoke Bomb", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Throw smoke bomb"},
+      {"name": "Smoke Liberation", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Smoke explosion"},
+      {"name": "Smoke Torpedo", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Launch yourself"},
+      {"name": "Smoke Blast", "key": "V", "stunCapability": true, "instinctBreak": false, "description": "Blast of smoke"},
+      {"name": "Smoke Flight", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Fly with smoke"}
+    ],
+    "combos": [
+      {
+        "id": "smoke-combo-1",
+        "name": "Smoke Screen",
+        "difficulty": "Beginner",
+        "playstyle": "Fruit Main",
+        "steps": ["Smoke X for explosion", "Smoke C to close distance", "Smoke V for blast", "Combat Z"],
+        "notation": "Smoke X → C → V → Combat Z",
+        "damageEstimate": "~4,000-5,500",
+        "notes": "Basic starter combo. Use smoke flight to escape dangerous situations.",
+        "recommendedPairings": {"swords": ["Katana", "Cutlass"], "fightingStyles": ["Combat"], "guns": ["Flintlock"]}
+      }
+    ]
   }
 ]
