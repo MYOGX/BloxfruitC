@@ -10,14 +10,36 @@ const allSwords = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c
 const allFightingStyles = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c.recommendedPairings.fightingStyles)))).sort();
 const allGuns = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c.recommendedPairings.guns)))).sort();
 
-// Custom select styling for better visibility
-const selectClassName = "w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#161b22] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium cursor-pointer hover:border-[#ff6b35]/50";
-
 export default function BuildFinderScreen() {
-  const [selectedFruit, setSelectedFruit] = useState<string>('');
-  const [selectedSword, setSelectedSword] = useState<string>('');
-  const [selectedFightingStyle, setSelectedFightingStyle] = useState<string>('');
-  const [selectedGun, setSelectedGun] = useState<string>('');
+  const [selectedFruits, setSelectedFruits] = useState<string[]>([]);
+  const [selectedSwords, setSelectedSwords] = useState<string[]>([]);
+  const [selectedFightingStyles, setSelectedFightingStyles] = useState<string[]>([]);
+  const [selectedGuns, setSelectedGuns] = useState<string[]>([]);
+
+  // Toggle selection handlers
+  const toggleFruit = (fruitId: string) => {
+    setSelectedFruits(prev =>
+      prev.includes(fruitId) ? prev.filter(id => id !== fruitId) : [...prev, fruitId]
+    );
+  };
+
+  const toggleSword = (sword: string) => {
+    setSelectedSwords(prev =>
+      prev.includes(sword) ? prev.filter(s => s !== sword) : [...prev, sword]
+    );
+  };
+
+  const toggleFightingStyle = (style: string) => {
+    setSelectedFightingStyles(prev =>
+      prev.includes(style) ? prev.filter(s => s !== style) : [...prev, style]
+    );
+  };
+
+  const toggleGun = (gun: string) => {
+    setSelectedGuns(prev =>
+      prev.includes(gun) ? prev.filter(g => g !== gun) : [...prev, gun]
+    );
+  };
 
   const matchingCombos = useMemo(() => {
     const results: Array<{ fruit: Fruit; combo: typeof fruits[0]['combos'][0] }> = [];
@@ -25,10 +47,10 @@ export default function BuildFinderScreen() {
     fruits.forEach(fruit => {
       fruit.combos.forEach(combo => {
         const matches = {
-          fruit: !selectedFruit || fruit.id === selectedFruit,
-          sword: !selectedSword || combo.recommendedPairings.swords.includes(selectedSword),
-          fighting: !selectedFightingStyle || combo.recommendedPairings.fightingStyles.includes(selectedFightingStyle),
-          gun: !selectedGun || combo.recommendedPairings.guns.includes(selectedGun),
+          fruit: selectedFruits.length === 0 || selectedFruits.includes(fruit.id),
+          sword: selectedSwords.length === 0 || selectedSwords.some(sword => combo.recommendedPairings.swords.includes(sword)),
+          fighting: selectedFightingStyles.length === 0 || selectedFightingStyles.some(style => combo.recommendedPairings.fightingStyles.includes(style)),
+          gun: selectedGuns.length === 0 || selectedGuns.some(gun => combo.recommendedPairings.guns.includes(gun)),
         };
 
         if (matches.fruit && matches.sword && matches.fighting && matches.gun) {
@@ -38,15 +60,15 @@ export default function BuildFinderScreen() {
     });
 
     return results;
-  }, [selectedFruit, selectedSword, selectedFightingStyle, selectedGun]);
+  }, [selectedFruits, selectedSwords, selectedFightingStyles, selectedGuns]);
 
-  const hasSelections = selectedFruit || selectedSword || selectedFightingStyle || selectedGun;
+  const hasSelections = selectedFruits.length > 0 || selectedSwords.length > 0 || selectedFightingStyles.length > 0 || selectedGuns.length > 0;
 
   const resetSelections = () => {
-    setSelectedFruit('');
-    setSelectedSword('');
-    setSelectedFightingStyle('');
-    setSelectedGun('');
+    setSelectedFruits([]);
+    setSelectedSwords([]);
+    setSelectedFightingStyles([]);
+    setSelectedGuns([]);
   };
 
   return (
@@ -57,7 +79,7 @@ export default function BuildFinderScreen() {
           Build Finder
         </h1>
         <p className="text-lg text-[#8b949e] font-medium">
-          Select your equipment to find the best combos for your build
+          Check off all your owned items to see available combos based on your inventory
         </p>
       </div>
 
@@ -79,109 +101,93 @@ export default function BuildFinderScreen() {
           {/* Fruit Selection */}
           <div>
             <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
-              🍎 Your Fruit
+              🍎 Your Fruits {selectedFruits.length > 0 && `(${selectedFruits.length})`}
             </label>
-            <select
-              value={selectedFruit}
-              onChange={(e) => setSelectedFruit(e.target.value)}
-              className={selectClassName}
-              style={{
-                colorScheme: 'dark',
-              }}
-            >
-              <option value="" className="bg-[#161b22] text-white py-2">Any Fruit</option>
+            <div className="border-2 border-[#30363d] rounded-lg bg-[#0d1117] max-h-64 overflow-y-auto">
               {fruits.map(fruit => (
-                <option key={fruit.id} value={fruit.id} className="bg-[#161b22] text-white py-2 hover:bg-[#ff6b35]">
-                  {fruit.name}
-                </option>
+                <label
+                  key={fruit.id}
+                  className="flex items-center px-4 py-3 hover:bg-[#161b22] cursor-pointer border-b border-[#30363d] last:border-b-0 transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedFruits.includes(fruit.id)}
+                    onChange={() => toggleFruit(fruit.id)}
+                    className="w-4 h-4 text-[#ff6b35] bg-[#0d1117] border-[#30363d] rounded focus:ring-[#ff6b35] focus:ring-2"
+                  />
+                  <span className="ml-3 text-white font-medium">{fruit.name}</span>
+                </label>
               ))}
-            </select>
-            {selectedFruit && (
-              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
-                Selected: {fruits.find(f => f.id === selectedFruit)?.name}
-              </p>
-            )}
+            </div>
           </div>
 
           {/* Sword Selection */}
           <div>
             <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
-              ⚔️ Your Sword
+              ⚔️ Your Swords {selectedSwords.length > 0 && `(${selectedSwords.length})`}
             </label>
-            <select
-              value={selectedSword}
-              onChange={(e) => setSelectedSword(e.target.value)}
-              className={selectClassName}
-              style={{
-                colorScheme: 'dark',
-              }}
-            >
-              <option value="" className="bg-[#161b22] text-white py-2">Any Sword</option>
+            <div className="border-2 border-[#30363d] rounded-lg bg-[#0d1117] max-h-64 overflow-y-auto">
               {allSwords.map(sword => (
-                <option key={sword} value={sword} className="bg-[#161b22] text-white py-2">
-                  {sword}
-                </option>
+                <label
+                  key={sword}
+                  className="flex items-center px-4 py-3 hover:bg-[#161b22] cursor-pointer border-b border-[#30363d] last:border-b-0 transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedSwords.includes(sword)}
+                    onChange={() => toggleSword(sword)}
+                    className="w-4 h-4 text-[#ff6b35] bg-[#0d1117] border-[#30363d] rounded focus:ring-[#ff6b35] focus:ring-2"
+                  />
+                  <span className="ml-3 text-white font-medium">{sword}</span>
+                </label>
               ))}
-            </select>
-            {selectedSword && (
-              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
-                Selected: {selectedSword}
-              </p>
-            )}
+            </div>
           </div>
 
           {/* Fighting Style Selection */}
           <div>
             <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
-              🥊 Fighting Style
+              🥊 Fighting Styles {selectedFightingStyles.length > 0 && `(${selectedFightingStyles.length})`}
             </label>
-            <select
-              value={selectedFightingStyle}
-              onChange={(e) => setSelectedFightingStyle(e.target.value)}
-              className={selectClassName}
-              style={{
-                colorScheme: 'dark',
-              }}
-            >
-              <option value="" className="bg-[#161b22] text-white py-2">Any Fighting Style</option>
+            <div className="border-2 border-[#30363d] rounded-lg bg-[#0d1117] max-h-64 overflow-y-auto">
               {allFightingStyles.map(style => (
-                <option key={style} value={style} className="bg-[#161b22] text-white py-2">
-                  {style}
-                </option>
+                <label
+                  key={style}
+                  className="flex items-center px-4 py-3 hover:bg-[#161b22] cursor-pointer border-b border-[#30363d] last:border-b-0 transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedFightingStyles.includes(style)}
+                    onChange={() => toggleFightingStyle(style)}
+                    className="w-4 h-4 text-[#ff6b35] bg-[#0d1117] border-[#30363d] rounded focus:ring-[#ff6b35] focus:ring-2"
+                  />
+                  <span className="ml-3 text-white font-medium">{style}</span>
+                </label>
               ))}
-            </select>
-            {selectedFightingStyle && (
-              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
-                Selected: {selectedFightingStyle}
-              </p>
-            )}
+            </div>
           </div>
 
           {/* Gun Selection */}
           <div>
             <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
-              🔫 Your Gun
+              🔫 Your Guns {selectedGuns.length > 0 && `(${selectedGuns.length})`}
             </label>
-            <select
-              value={selectedGun}
-              onChange={(e) => setSelectedGun(e.target.value)}
-              className={selectClassName}
-              style={{
-                colorScheme: 'dark',
-              }}
-            >
-              <option value="" className="bg-[#161b22] text-white py-2">Any Gun</option>
+            <div className="border-2 border-[#30363d] rounded-lg bg-[#0d1117] max-h-64 overflow-y-auto">
               {allGuns.map(gun => (
-                <option key={gun} value={gun} className="bg-[#161b22] text-white py-2">
-                  {gun}
-                </option>
+                <label
+                  key={gun}
+                  className="flex items-center px-4 py-3 hover:bg-[#161b22] cursor-pointer border-b border-[#30363d] last:border-b-0 transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedGuns.includes(gun)}
+                    onChange={() => toggleGun(gun)}
+                    className="w-4 h-4 text-[#ff6b35] bg-[#0d1117] border-[#30363d] rounded focus:ring-[#ff6b35] focus:ring-2"
+                  />
+                  <span className="ml-3 text-white font-medium">{gun}</span>
+                </label>
               ))}
-            </select>
-            {selectedGun && (
-              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
-                Selected: {selectedGun}
-              </p>
-            )}
+            </div>
           </div>
         </div>
       </div>
