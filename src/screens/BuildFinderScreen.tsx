@@ -10,6 +10,9 @@ const allSwords = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c
 const allFightingStyles = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c.recommendedPairings.fightingStyles)))).sort();
 const allGuns = Array.from(new Set(fruits.flatMap(f => f.combos.flatMap(c => c.recommendedPairings.guns)))).sort();
 
+// Custom select styling for better visibility
+const selectClassName = "w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#161b22] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium cursor-pointer hover:border-[#ff6b35]/50";
+
 export default function BuildFinderScreen() {
   const [selectedFruit, setSelectedFruit] = useState<string>('');
   const [selectedSword, setSelectedSword] = useState<string>('');
@@ -75,70 +78,110 @@ export default function BuildFinderScreen() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Fruit Selection */}
           <div>
-            <label className="block text-sm font-bold text-[#8b949e] uppercase tracking-wide mb-3">
+            <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
               🍎 Your Fruit
             </label>
             <select
               value={selectedFruit}
               onChange={(e) => setSelectedFruit(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#0d1117] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium"
+              className={selectClassName}
+              style={{
+                colorScheme: 'dark',
+              }}
             >
-              <option value="">Any Fruit</option>
+              <option value="" className="bg-[#161b22] text-white py-2">Any Fruit</option>
               {fruits.map(fruit => (
-                <option key={fruit.id} value={fruit.id}>{fruit.name}</option>
+                <option key={fruit.id} value={fruit.id} className="bg-[#161b22] text-white py-2 hover:bg-[#ff6b35]">
+                  {fruit.name}
+                </option>
               ))}
             </select>
+            {selectedFruit && (
+              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
+                Selected: {fruits.find(f => f.id === selectedFruit)?.name}
+              </p>
+            )}
           </div>
 
           {/* Sword Selection */}
           <div>
-            <label className="block text-sm font-bold text-[#8b949e] uppercase tracking-wide mb-3">
+            <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
               ⚔️ Your Sword
             </label>
             <select
               value={selectedSword}
               onChange={(e) => setSelectedSword(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#0d1117] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium"
+              className={selectClassName}
+              style={{
+                colorScheme: 'dark',
+              }}
             >
-              <option value="">Any Sword</option>
+              <option value="" className="bg-[#161b22] text-white py-2">Any Sword</option>
               {allSwords.map(sword => (
-                <option key={sword} value={sword}>{sword}</option>
+                <option key={sword} value={sword} className="bg-[#161b22] text-white py-2">
+                  {sword}
+                </option>
               ))}
             </select>
+            {selectedSword && (
+              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
+                Selected: {selectedSword}
+              </p>
+            )}
           </div>
 
           {/* Fighting Style Selection */}
           <div>
-            <label className="block text-sm font-bold text-[#8b949e] uppercase tracking-wide mb-3">
+            <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
               🥊 Fighting Style
             </label>
             <select
               value={selectedFightingStyle}
               onChange={(e) => setSelectedFightingStyle(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#0d1117] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium"
+              className={selectClassName}
+              style={{
+                colorScheme: 'dark',
+              }}
             >
-              <option value="">Any Fighting Style</option>
+              <option value="" className="bg-[#161b22] text-white py-2">Any Fighting Style</option>
               {allFightingStyles.map(style => (
-                <option key={style} value={style}>{style}</option>
+                <option key={style} value={style} className="bg-[#161b22] text-white py-2">
+                  {style}
+                </option>
               ))}
             </select>
+            {selectedFightingStyle && (
+              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
+                Selected: {selectedFightingStyle}
+              </p>
+            )}
           </div>
 
           {/* Gun Selection */}
           <div>
-            <label className="block text-sm font-bold text-[#8b949e] uppercase tracking-wide mb-3">
+            <label className="block text-sm font-bold text-[#ff6b35] uppercase tracking-wide mb-3">
               🔫 Your Gun
             </label>
             <select
               value={selectedGun}
               onChange={(e) => setSelectedGun(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-[#30363d] rounded-lg bg-[#0d1117] text-white focus:outline-none focus:ring-2 focus:ring-[#ff6b35] focus:border-transparent transition-all font-medium"
+              className={selectClassName}
+              style={{
+                colorScheme: 'dark',
+              }}
             >
-              <option value="">Any Gun</option>
+              <option value="" className="bg-[#161b22] text-white py-2">Any Gun</option>
               {allGuns.map(gun => (
-                <option key={gun} value={gun}>{gun}</option>
+                <option key={gun} value={gun} className="bg-[#161b22] text-white py-2">
+                  {gun}
+                </option>
               ))}
             </select>
+            {selectedGun && (
+              <p className="mt-2 text-sm text-[#00d9ff] font-medium">
+                Selected: {selectedGun}
+              </p>
+            )}
           </div>
         </div>
       </div>
