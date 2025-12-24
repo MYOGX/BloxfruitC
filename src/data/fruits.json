@@ -109,64 +109,65 @@
     ]
   },
   {
-    "id": "dragon",
-    "name": "Dragon",
+    "id": "dragon-east",
+    "name": "Dragon (East)",
     "rarity": "Mythical",
     "type": "Beast",
     "imageUrl": "/images/fruits/dragon.png",
-    "description": "The ultimate transformation fruit with devastating area damage. Excellent for PvP when transformed.",
+    "description": "Eastern Dragon variant resembling East Asian dragons. Excels in AoE damage and crowd control. Can move while attacking. Best for PvE grinding.",
     "moves": [
       {
-        "name": "Dragon Rush",
+        "name": "Heatwave Cannon",
         "key": "Z",
         "stunCapability": true,
         "instinctBreak": false,
-        "description": "Rush forward in dragon form dealing damage"
+        "description": "Shoots charged flame beam with massive explosion"
       },
       {
-        "name": "Dragon Breath",
+        "name": "Infernal Pincer",
         "key": "X",
-        "stunCapability": false,
+        "stunCapability": true,
         "instinctBreak": true,
-        "description": "Breathe fire that breaks instinct"
+        "description": "Mid-range fire slashes creating flame waves"
       },
       {
-        "name": "Dragon Explosion",
+        "name": "Scorching Downfall",
         "key": "C",
         "stunCapability": true,
         "instinctBreak": true,
-        "description": "Create an explosion around you"
+        "description": "Rains explosive projectiles with massive AOE"
       },
       {
-        "name": "Transformation",
+        "name": "Imperial Evolution",
         "key": "V",
         "stunCapability": false,
         "instinctBreak": false,
-        "description": "Transform into full dragon form"
+        "description": "Transform into Eastern Dragon form (20% damage resistance)"
       },
       {
-        "name": "Dragon Flight",
+        "name": "Draconic Soar",
         "key": "F",
-        "stunCapability": false,
+        "stunCapability": true,
         "instinctBreak": false,
-        "description": "Fly in dragon form"
+        "description": "Flight with dive bomb attack"
       }
     ],
     "combos": [
       {
-        "id": "dragon-combo-1",
-        "name": "Transform Dragon",
-        "difficulty": "Beginner",
+        "id": "dragon-east-combo-1",
+        "name": "Eastern AOE Dominance",
+        "difficulty": "Intermediate",
         "playstyle": "Fruit Main",
         "steps": [
           "Transform with Dragon V",
-          "Use Dragon C to break instinct and stun",
-          "Follow with Dragon X for damage",
-          "Use Godhuman Z → C while in air"
+          "Use Dragon C for massive AOE damage",
+          "Follow with Dragon Z while moving",
+          "Dragon X for additional waves",
+          "Godhuman Z → C to finish"
         ],
-        "notation": "Dragon V → C → X → Godhuman Z → C",
-        "damageEstimate": "~9,000-11,000",
-        "notes": "Basic transformation combo. Dragon C is key to landing the rest of the combo.",
+        "notation": "Dragon V → C → Z → X → Godhuman Z → C",
+        "damageEstimate": "~12,000-15,000",
+        "notes": "Eastern Dragon excels at clearing groups. Can move while using Heatwave Cannon (Z).",
         "recommendedPairings": {
           "swords": ["Tushita", "Cursed Dual Katana"],
           "fightingStyles": ["Godhuman", "Dragon Talon"],
@@ -174,23 +175,113 @@
         }
       },
       {
-        "id": "dragon-combo-2",
-        "name": "Aerial Dragon Assault",
+        "id": "dragon-east-combo-2",
+        "name": "Scorching Rain",
         "difficulty": "Advanced",
         "playstyle": "Hybrid",
         "steps": [
           "Transform with Dragon V",
-          "Fly above opponent with Dragon F",
-          "Drop down with Dragon C",
-          "Immediately use CDK Z → X",
-          "Finish with Dragon Talon Z → X → C"
+          "Fly above with Dragon F",
+          "Dragon C from above for full AOE",
+          "CDK Z → X while they're stunned",
+          "Dragon X to finish"
         ],
-        "notation": "Dragon V → F (position) → C → CDK Z → X → Dragon Talon Z → X → C",
-        "damageEstimate": "~14,000-17,000",
-        "notes": "Advanced aerial combo. Positioning is crucial for landing Dragon C from above.",
+        "notation": "Dragon V → F (position) → C → CDK Z → X → Dragon X",
+        "damageEstimate": "~15,000-18,000",
+        "notes": "Eastern Dragon's AOE makes it perfect for multi-target situations. Great for grinding.",
         "recommendedPairings": {
           "swords": ["Cursed Dual Katana"],
           "fightingStyles": ["Dragon Talon", "Godhuman"],
+          "guns": ["Soul Guitar"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "dragon-west",
+    "name": "Dragon (West)",
+    "rarity": "Mythical",
+    "type": "Beast",
+    "imageUrl": "/images/fruits/dragon.png",
+    "description": "Western Dragon variant resembling medieval European dragons. Excels in mobility, agility, and single-target damage. Minimal end lag on abilities. Best for PvP.",
+    "moves": [
+      {
+        "name": "Heatwave Cannon",
+        "key": "Z",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "Fast charged flame beam with massive explosion"
+      },
+      {
+        "name": "Infernal Pincer",
+        "key": "X",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Quick mid-range fire slashes"
+      },
+      {
+        "name": "Scorching Downfall",
+        "key": "C",
+        "stunCapability": true,
+        "instinctBreak": true,
+        "description": "Fast explosive rain attack"
+      },
+      {
+        "name": "Imperial Evolution",
+        "key": "V",
+        "stunCapability": false,
+        "instinctBreak": false,
+        "description": "Transform into Western Dragon form (enhanced mobility)"
+      },
+      {
+        "name": "Draconic Soar",
+        "key": "F",
+        "stunCapability": true,
+        "instinctBreak": false,
+        "description": "High-speed flight with dive attack"
+      }
+    ],
+    "combos": [
+      {
+        "id": "dragon-west-combo-1",
+        "name": "Western Speed Blitz",
+        "difficulty": "Intermediate",
+        "playstyle": "Hybrid",
+        "steps": [
+          "Transform with Dragon V",
+          "Dragon X for quick instinct break",
+          "Immediately Dragon Z (minimal end lag)",
+          "CDK Z → X combo",
+          "Dragon F dive to finish"
+        ],
+        "notation": "Dragon V → X → Z → CDK Z → X → Dragon F",
+        "damageEstimate": "~13,000-16,000",
+        "notes": "Western Dragon has minimal end lag, allowing quick ability chains. Perfect for PvP.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana", "Tushita"],
+          "fightingStyles": ["Godhuman", "Dragon Talon"],
+          "guns": ["Soul Guitar"]
+        }
+      },
+      {
+        "id": "dragon-west-combo-2",
+        "name": "Aerial Agility",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": [
+          "Transform with Dragon V",
+          "Dragon F for positioning",
+          "Dragon C from optimal angle",
+          "Dragon X quickly (no lag)",
+          "Dragon Z to finish",
+          "Repeat cycle"
+        ],
+        "notation": "Dragon V → F → C → X → Z → repeat",
+        "damageEstimate": "~14,000-17,000",
+        "notes": "Use superior mobility to control engagement. Western Dragon's fast ability usage enables aggressive playstyle.",
+        "recommendedPairings": {
+          "swords": ["Cursed Dual Katana"],
+          "fightingStyles": ["Godhuman", "Dragon Talon"],
           "guns": ["Soul Guitar"]
         }
       }
@@ -974,7 +1065,7 @@
   {
     "id": "gas",
     "name": "Gas",
-    "rarity": "Rare",
+    "rarity": "Mythical",
     "type": "Elemental",
     "imageUrl": "/images/fruits/gas.png",
     "description": "Poison gas fruit with area denial and DOT damage. Great for zoning.",
@@ -1128,36 +1219,47 @@
     "rarity": "Mythical",
     "type": "Natural",
     "imageUrl": "/images/fruits/control.png",
-    "description": "Control objects and enemies. Ultimate battlefield control.",
+    "description": "Reworked in Update 29 (Dec 2025). Create a domain with Hands/Dagger modes. Admin-style panel for advanced control. Top-tier strategic fruit.",
     "moves": [
-      {"name": "Gamma Rush", "key": "Z", "stunCapability": true, "instinctBreak": false, "description": "Launch controlled object"},
-      {"name": "Echo Knife", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Controlled blade attack"},
-      {"name": "Teleport", "key": "C", "stunCapability": false, "instinctBreak": false, "description": "Teleport short distance"},
-      {"name": "Delta Storm", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Massive area control"},
-      {"name": "ROOM", "key": "F", "stunCapability": false, "instinctBreak": false, "description": "Create control zone"}
+      {"name": "Domain Control", "key": "Z", "stunCapability": false, "instinctBreak": false, "description": "Create domain with Hands/Dagger modes. Buffs all moves inside domain"},
+      {"name": "Slice N' Dice (Out)", "key": "X", "stunCapability": true, "instinctBreak": true, "description": "Dash, stun, and slash enemy. Teleporting rush outside domain"},
+      {"name": "Boomerang Blade", "key": "C", "stunCapability": true, "instinctBreak": false, "description": "Throw dagger that returns like boomerang, pulling enemy closer"},
+      {"name": "Absolute Control", "key": "V", "stunCapability": true, "instinctBreak": true, "description": "Domain exclusive. Purple domain with rapid slashes and cube attacks"},
+      {"name": "Gamma Blade", "key": "F", "stunCapability": true, "instinctBreak": true, "description": "Countless sword strikes ending with launcher. Unlocked at 250 Mastery"}
     ],
     "combos": [
       {
         "id": "control-combo-1",
-        "name": "Surgical Strike",
+        "name": "Domain Domination",
         "difficulty": "Advanced",
         "playstyle": "Fruit Main",
-        "steps": ["Control F to create ROOM", "Control X to break instinct", "Control V for massive damage", "Teleport with Control C", "CDK Z → X from new position"],
-        "notation": "Control F → X → V → C (teleport) → CDK Z → X",
-        "damageEstimate": "~14,000-16,500",
-        "notes": "ROOM enhances all abilities. Use teleport for positioning and mixups.",
+        "steps": ["Control Z to create domain", "Switch to Dagger Mode (Z again)", "Control C to pull enemy", "Control V for Absolute Control (hold V for full damage)", "Control F for Gamma Blade finish"],
+        "notation": "Control Z (domain) → Z (dagger mode) → C → V (hold) → F",
+        "damageEstimate": "~16,000-20,000",
+        "notes": "Domain buffs all abilities. Absolute Control (V held) deals massive damage with cinematic animation.",
         "recommendedPairings": {"swords": ["Cursed Dual Katana", "Tushita"], "fightingStyles": ["Godhuman", "Superhuman"], "guns": ["Soul Guitar"]}
       },
       {
         "id": "control-combo-2",
-        "name": "Control Mastery",
+        "name": "Surgical Perfection",
         "difficulty": "Expert",
         "playstyle": "Hybrid",
-        "steps": ["Control F", "Soul Guitar Z", "Control V", "Teleport behind with C", "CDK Z → X", "Control X", "Godhuman Z → C"],
-        "notation": "Control F → Soul Guitar Z → Control V → C → CDK Z → X → Control X → Godhuman Z → C",
-        "damageEstimate": "~17,000-20,000",
-        "notes": "Expert combo requiring perfect execution. Can one-shot with full build.",
+        "steps": ["Control Z for domain", "Soul Guitar Z", "Control C to pull", "CDK Z → X while pulled", "Control V for Absolute Control", "Control F", "Godhuman Z → C"],
+        "notation": "Control Z → Soul Guitar Z → Control C → CDK Z → X → Control V → F → Godhuman Z → C",
+        "damageEstimate": "~19,000-23,000",
+        "notes": "Expert combo with Update 29 rework. Control now competes with Lightning and Pain. Use admin panel for advanced combos.",
         "recommendedPairings": {"swords": ["Cursed Dual Katana"], "fightingStyles": ["Godhuman"], "guns": ["Soul Guitar"]}
+      },
+      {
+        "id": "control-combo-3",
+        "name": "Mode Switch Mastery",
+        "difficulty": "Advanced",
+        "playstyle": "Fruit Main",
+        "steps": ["Control Z domain", "Hands Mode for M1s", "Switch to Dagger Mode (Z)", "Control X outside domain for teleport rush", "Re-enter domain", "Control V → F combo"],
+        "notation": "Control Z → M1s (hands) → Z (dagger) → X (outside) → Z (re-enter) → V → F",
+        "damageEstimate": "~15,000-18,000",
+        "notes": "Utilize both Hands and Dagger modes. Control can walk on water in Update 29. Switch modes strategically.",
+        "recommendedPairings": {"swords": ["Tushita", "Cursed Dual Katana"], "fightingStyles": ["Godhuman", "Electric Claw"], "guns": ["Soul Guitar", "Kabucha"]}
       }
     ]
   },
