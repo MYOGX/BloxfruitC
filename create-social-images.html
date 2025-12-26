@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Social Images</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial; background: #0d1117; color: white; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        canvas { border: 3px solid #30363d; margin: 20px 0; }
+        button { background: #ff6b35; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin: 10px; }
+        button:hover { background: #ff4500; }
+        h2 { color: #ff6b35; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Blox Fruits Social Images Generator</h1>
+        <p>Click the buttons below to generate and download your social sharing images!</p>
+
+        <div>
+            <h2>1. Share Preview (1200x630) - og-image.png & twitter-card.png</h2>
+            <canvas id="shareCanvas" width="1200" height="630"></canvas>
+            <br>
+            <button onclick="generateShareImage()">Generate Share Image</button>
+            <button onclick="downloadImage('shareCanvas', 'og-image.png')">Download og-image.png</button>
+            <button onclick="downloadImage('shareCanvas', 'twitter-card.png')">Download twitter-card.png</button>
+        </div>
+
+        <div>
+            <h2>2. Apple Touch Icon (180x180) - apple-touch-icon.png</h2>
+            <canvas id="iconCanvas" width="180" height="180"></canvas>
+            <br>
+            <button onclick="generateIcon()">Generate Icon</button>
+            <button onclick="downloadImage('iconCanvas', 'apple-touch-icon.png')">Download apple-touch-icon.png</button>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #161b22; border-radius: 8px;">
+            <h3>📝 Instructions:</h3>
+            <ol>
+                <li>Click "Generate Share Image" and "Generate Icon" buttons above</li>
+                <li>Download all 3 images using the download buttons</li>
+                <li>Save them to: <code style="background: #0d1117; padding: 2px 8px; border-radius: 4px;">/home/user/BloxfruitC/public/</code></li>
+                <li>Rebuild your app: <code style="background: #0d1117; padding: 2px 8px; border-radius: 4px;">npm run build</code></li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function generateShareImage() {
+            const canvas = document.getElementById('shareCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background (orange to red)
+            const gradient = ctx.createLinearGradient(0, 0, 0, 630);
+            gradient.addColorStop(0, '#ff6b35');
+            gradient.addColorStop(1, '#ff4500');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Add comic-style burst rays
+            ctx.strokeStyle = '#ffaa00';
+            ctx.lineWidth = 4;
+            for (let i = 0; i < 40; i++) {
+                ctx.beginPath();
+                ctx.moveTo(600, 315);
+                const angle = (i / 40) * Math.PI * 2;
+                ctx.lineTo(600 + Math.cos(angle) * 500, 315 + Math.sin(angle) * 350);
+                ctx.stroke();
+            }
+
+            // Main title "BLOX FRUITS"
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // White text with black outline
+            ctx.font = 'bold 130px Arial, sans-serif';
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 12;
+            ctx.strokeText('BLOX', 600, 220);
+            ctx.strokeText('FRUITS', 600, 340);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('BLOX', 600, 220);
+            ctx.fillText('FRUITS', 600, 340);
+
+            // Subtitle "42 FRUITS | PVP COMBO GUIDE"
+            ctx.font = 'bold 42px Arial, sans-serif';
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 6;
+            ctx.strokeText('42 FRUITS | PVP COMBO GUIDE', 600, 480);
+            ctx.fillStyle = '#00d9ff';
+            ctx.fillText('42 FRUITS | PVP COMBO GUIDE', 600, 480);
+
+            // Bottom text
+            ctx.font = 'bold 38px Arial, sans-serif';
+            ctx.strokeText('⚡ DEADLY COMBOS ⚡', 600, 560);
+            ctx.fillStyle = '#ffd700';
+            ctx.fillText('⚡ DEADLY COMBOS ⚡', 600, 560);
+
+            // Game controller emoji style icon (top left)
+            ctx.font = 'bold 60px Arial, sans-serif';
+            ctx.fillText('🎮', 100, 80);
+
+            // Sword emoji (top right)
+            ctx.fillText('⚔️', 1100, 80);
+
+            // Fist emoji (bottom left)
+            ctx.fillText('👊', 100, 550);
+
+            // Spiral/fruit emoji (bottom right)
+            ctx.fillText('🌀', 1100, 550);
+        }
+
+        function generateIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background (orange to red)
+            const gradient = ctx.createLinearGradient(0, 0, 0, 180);
+            gradient.addColorStop(0, '#ff6b35');
+            gradient.addColorStop(1, '#ff4500');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 180, 180);
+
+            // Large "B" in center
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = 'bold 120px Arial, sans-serif';
+
+            // Black outline
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 8;
+            ctx.strokeText('B', 90, 90);
+
+            // White fill
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('B', 90, 90);
+        }
+
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Auto-generate on page load
+        window.onload = function() {
+            generateShareImage();
+            generateIcon();
+        };
+    </script>
+</body>
+</html>
